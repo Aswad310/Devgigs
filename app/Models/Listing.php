@@ -10,7 +10,7 @@ class Listing extends Model
     use HasFactory;
 
     # Mass Assignment Rule
-    protected $fillable = ['title', 'logo' ,'company', 'location', 'website', 'email', 'description', 'tags'];
+    protected $fillable = ['user_id', 'title', 'logo' ,'company', 'location', 'website', 'email', 'description', 'tags'];
 
     public function scopeFilter($query, array $filters)
     {
@@ -24,5 +24,11 @@ class Listing extends Model
                 ->orWhere('tags', 'like', '%' . request('search') . '%')
                 ->orWhere('location', 'like', '%' . request('search') . '%');
         }
+    }
+
+    // Relationship to User
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

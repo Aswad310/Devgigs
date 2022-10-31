@@ -4,7 +4,6 @@
             <h2 class="text-2xl font-bold uppercase mb-1">Register</h2>
             <p class="mb-4">Create an account to post gigs</p>
         </header>
-
         <form method="POST" action="/users">
             @csrf
             <div class="mb-6">
@@ -15,12 +14,10 @@
                     name="name"
                     value="{{old('name')}}"
                 />
-
                 @error('name')
                 <div class="text-red-500 text-xs mt-1">{{$message}}</div>
                 @enderror
             </div>
-
             <div class="mb-6">
                 <label for="email" class="inline-block text-lg mb-2">Email <span style="color: red">*</span></label>
                 <input
@@ -29,12 +26,10 @@
                     name="email"
                     value="{{old('email')}}"
                 />
-
                 @error('email')
                 <div class="text-red-500 text-xs mt-1">{{$message}}</div>
                 @enderror
             </div>
-
             <div class="mb-6">
                 <label for="password" class="inline-block text-lg mb-2">Password <span style="color: red">*</span></label>
                 <input
@@ -43,12 +38,10 @@
                     name="password"
                     value="{{old('password')}}"
                 />
-
                 @error('password')
                 <div class="text-red-500 text-xs mt-1">{{$message}}</div>
                 @enderror
             </div>
-
             <div class="mb-6">
                 <label for="password2" class="inline-block text-lg mb-2">Confirm Password <span style="color: red">*</span></label>
                 <input
@@ -62,7 +55,6 @@
                 <div class="text-red-500 text-xs mt-1">{{$message}}</div>
                 @enderror
             </div>
-
             <div class="mb-6">
                 <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">Sign Up</button>
             </div>
