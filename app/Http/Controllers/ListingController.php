@@ -6,6 +6,7 @@ use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Input;
 
 class ListingController extends Controller
 {
@@ -13,7 +14,9 @@ class ListingController extends Controller
     public function index()
     {
         $listings = Listing::latest()->filter(request(['tag', 'search']))->paginate(6);
-        return view('listings.index')->with('listings', $listings);
+        # dd(request('search'));
+        $search = request('search');
+        return view('listings.index')->with(['listings' => $listings, 'search' => $search]);
     }
 
     // show single listing

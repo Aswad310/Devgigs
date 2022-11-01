@@ -28,12 +28,18 @@
             },
         };
     </script>
+    <style>
+        input:focus{
+            outline: none !important;
+            border-color: #38DB77;
+        }
+    </style>
     <title>DevGigs</title>
 </head>
 <body class="mb-48" style="font-family: 'Poppins', sans-serif;">
     {{-- Navbar --}}
     <nav class="flex justify-between items-center mb-2 ">
-        <a href="/"><img class="w-24" src="{{asset('images/steve-jobs.png')}}" alt="" class="logo"/></a>
+        <a href="/"><img class="w-16" src="{{asset('images/steve-jobs.png')}}" alt="" class="logo"/></a>
         <ul class="flex space-x-6 mr-6 text-lg">
             @auth
                 <li>
@@ -74,3 +80,4 @@
     <x-flash-message />
 </body>
 </html>
+
