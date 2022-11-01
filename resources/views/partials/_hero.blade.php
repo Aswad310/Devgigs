@@ -7,8 +7,8 @@
         <h1 class="text-6xl font-bold uppercase text-white">
             Dev<span class="text-black">Gigs</span>
         </h1>
-        <p class="text-2xl text-black font-bold my-4 ">
-            Find or post software jobs and projects
+        <p class="text-2xl text-black font-bold my-4">
+            FIND OR POST SOFTWARE JOBS
         </p>
         @guest
             <div>
