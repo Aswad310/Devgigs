@@ -5,7 +5,7 @@
 
     @if(isset($search))
         <div class="px-4 py-8 border-t border-b border-gray-300 text-lg">
-            <p class="text-center">You search for: <b>{{$search}}</b></p>
+            <p class="text-center">Search results for: "<b>{{$search}}</b>"</p>
         </div>
     @endif
     <div class="container">
